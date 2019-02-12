@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: ac3f99f3e8dda21499df6f12e6fc3995
+  productGUID: 30b84dda5e5e3274bacbbdc04b26cbf0
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Version Control 2.0
+  productName: 2D Game Physics
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -648,8 +648,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: bea2bc6e-bfe8-4a77-940d-9905fc3e885d
-  projectName: Version Control 2.0
+  cloudProjectId: eaea947d-440f-4011-bfd8-e8174471e763
+  projectName: 2D Game Physics
   organizationId: tfrauenfeld
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
