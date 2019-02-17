@@ -7,28 +7,29 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody2D player;
     public float playerSpeed;
     public float jumpPower;
-    public GameObject slimeBall;
-    public float slimeBallSpeed;
-    public int ammo = 10;
-    public int health = 100;
+    public int maxProjectiles;
 
+    public Transform slimeballSpawnLocation;
+    public SlimeballProjectile slimeballPrefab;
+    public List<SlimeballProjectile> slimeballs = new List<SlimeballProjectile>();
+
+    public int health = 100;
     float horizontal;
     bool grounded;
 
     void Start() {
-        player = GetComponent<Rigidbody2D>();
         grounded = false;
     }
 
     void Update() {
+        horizontal = Input.GetAxis("Horizontal");
+        player.velocity = new Vector2(horizontal * playerSpeed, player.velocity.y);
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             player.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
             grounded = false;
         }
-
-        horizontal = Input.GetAxis("Horizontal");
-        player.velocity = new Vector2(horizontal * playerSpeed, player.velocity.y);
 
         if (horizontal < 0)
         {
@@ -39,13 +40,15 @@ public class PlayerController : MonoBehaviour {
             transform.right = new Vector3(1f, 0f, 0f);
         }
 
-        if (ammo > 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (slimeballs.Count < maxProjectiles)
             {
-                GameObject shot = (GameObject)(Instantiate(slimeBall, transform.position + transform.right * 1.5f, Quaternion.identity));
-                shot.GetComponent<Rigidbody2D>().AddForce(transform.right * slimeBallSpeed);
-                ammo--;
+                SlimeballProjectile newSlimeball = Instantiate<SlimeballProjectile>(slimeballPrefab);
+                newSlimeball.transform.position = slimeballSpawnLocation.position;
+                newSlimeball.player = this;
+
+                slimeballs.Add(newSlimeball);
             }
         }
     }
@@ -60,22 +63,20 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        AmmoPowerup ammoPowerup = collider.gameObject.GetComponent<AmmoPowerup>();
         HealthPowerup healthPowerup = collider.gameObject.GetComponent<HealthPowerup>();
-
-        if (ammoPowerup != null)
-        {
-            ammo += ammoPowerup.ammoIncrease;
-            Destroy(ammoPowerup.gameObject);
-        }
 
         if (healthPowerup != null)
         {
             if (health == 50)
             {
                 health += healthPowerup.healthIncrease;
-                Destroy(healthPowerup.gameObject);
             }
+            Destroy(healthPowerup.gameObject);
         }
+    }
+
+    public void ProjectileDestroyed( SlimeballProjectile destroyedProjectile)
+    {
+        slimeballs.Remove(destroyedProjectile);
     }
 }

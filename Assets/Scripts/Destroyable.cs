@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoPowerup : MonoBehaviour {
+public class Destroyable : MonoBehaviour {
 
-    public int ammoIncrease;
 }
