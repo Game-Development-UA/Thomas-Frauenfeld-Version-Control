@@ -26,16 +26,18 @@ public class SlimeballProjectile : MonoBehaviour {
         rbody.velocity = new Vector2(speed, 0f);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroyable destroyable = collider.GetComponent<Destroyable>();
-
-        if (destroyable)
+        if (collision.gameObject.GetComponent<BoxCollider2D>())
         {
-            Destroy(destroyable.gameObject);
-        }
+            Destroyable destroyable = collision.gameObject.GetComponent<Destroyable>();
 
-        player.ProjectileDestroyed(this);
-        Destroy(this.gameObject);
+            if (destroyable)
+            {
+                Destroy(destroyable.gameObject);
+            }
+            player.ProjectileDestroyed(this);
+            Destroy(this.gameObject);
+        }
     }
 }

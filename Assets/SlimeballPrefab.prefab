@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212744543435181918}
   - component: {fileID: 50885321418734644}
   - component: {fileID: 114068519958081118}
+  - component: {fileID: 58985589429339898}
   m_Layer: 0
   m_Name: SlimeballPrefab
   m_TagString: Untagged
@@ -62,6 +63,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58985589429339898
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586840218890808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114068519958081118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbody: {fileID: 50885321418734644}
-  speed: 5
+  speed: 10
   lifetime: 2
   player: {fileID: 0}
 --- !u!212 &212744543435181918
