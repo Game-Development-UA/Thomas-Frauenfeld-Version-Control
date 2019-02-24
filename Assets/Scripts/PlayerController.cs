@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour {
     public List<SlimeballProjectile> slimeballs = new List<SlimeballProjectile>();
 
     public int health = 100;
-    public string direction;
 
     float horizontal;
     bool grounded;
@@ -36,19 +35,17 @@ public class PlayerController : MonoBehaviour {
         if (horizontal < 0)
         {
             transform.right = new Vector3(-1f, 0f, 0f);
-            direction = "left";
         }
         else if (horizontal > 0)
         {
             transform.right = new Vector3(1f, 0f, 0f);
-            direction = "right";
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (slimeballs.Count < maxProjectiles)
             {
-                SlimeballProjectile newSlimeball = Instantiate<SlimeballProjectile>(slimeballPrefab);
+                SlimeballProjectile newSlimeball = Instantiate<SlimeballProjectile>(slimeballPrefab, slimeballSpawnLocation.position, player.transform.rotation);
                 newSlimeball.transform.position = slimeballSpawnLocation.position;
                 newSlimeball.player = this;
 
