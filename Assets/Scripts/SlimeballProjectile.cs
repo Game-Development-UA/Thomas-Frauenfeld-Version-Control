@@ -23,7 +23,7 @@ public class SlimeballProjectile : MonoBehaviour {
 
     void FixedUpdate()
     {
-        rbody.velocity = new Vector2(speed, 0f);
+        rbody.velocity = rbody.transform.right * speed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
