@@ -31,9 +31,6 @@ public class EnemyController : MonoBehaviour {
         {
             TurnAround();
         }
-
-        // if isDead
-        // This block should destroy the ant gameObject
     }
 
     void FixedUpdate()
@@ -47,12 +44,4 @@ public class EnemyController : MonoBehaviour {
     {
         transform.rotation = transform.rotation * Quaternion.Euler(0f, 180f, 0f);
     }
-
-    // OnTriggerEnter (I think)
-    // In this method, The boolean isDead should be changed to true
-
-    /*
-     * I'm not sure how to handle the player jumping directly on top of the enemy
-     * in order to kill it, but I think I need a collision handler here.
-     */
 }

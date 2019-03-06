@@ -39,5 +39,16 @@ public class SlimeballProjectile : MonoBehaviour {
             player.ProjectileDestroyed(this);
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == ("Floor"))
+        {
+            player.ProjectileDestroyed(this);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == ("Queen") && collision.gameObject.GetComponent<QueenController>().isDead())
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

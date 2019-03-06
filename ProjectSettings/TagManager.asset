@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Floor
   - Enemy
+  - Projectile
+  - SpawnLocation
+  - HealthPowerup
+  - LifePowerup
+  - Coin
+  - HoleCollider1
+  - HoleCollider2
+  - Queen
+  - QueenSpawnLocation
   layers:
   - Default
   - TransparentFX

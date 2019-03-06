@@ -1,25 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour {
 
     public Rigidbody2D player;
+    public Rigidbody2D queen;
     public float playerSpeed;
     public float jumpPower;
     public int maxProjectiles;
+    public Animator Animation;
+    public float runThreshold;
+    public GameObject startSpawnLocation;
+    public GameObject midpointSpawnLocation;
 
     public Transform slimeballSpawnLocation;
     public SlimeballProjectile slimeballPrefab;
+    public EnemyController redAnt;
+    public GameObject queenSpawner;
     public List<SlimeballProjectile> slimeballs = new List<SlimeballProjectile>();
-
-    public int health = 100;
 
     float horizontal;
     bool grounded;
+    int health;
+    int lives;
+    int coins;
 
     void Start() {
-        grounded = false;
+        health = 50;
+        grounded = true;
+        lives = 3;
+        player.transform.position = startSpawnLocation.transform.position;
     }
 
     void Update() {
@@ -29,7 +41,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             player.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
-            grounded = false;
         }
 
         if (horizontal < 0)
@@ -41,7 +52,7 @@ public class PlayerController : MonoBehaviour {
             transform.right = new Vector3(1f, 0f, 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !slimeballSpawnLocation.GetComponent<SpawnColliderScript>().GetIsCollision())
         {
             if (slimeballs.Count < maxProjectiles)
             {
@@ -52,27 +63,116 @@ public class PlayerController : MonoBehaviour {
                 slimeballs.Add(newSlimeball);
             }
         }
+
+        if (coins == 100)
+        {
+            lives += 1;
+            coins = 0;
+        }
+
+        Animation.SetBool("Running", Mathf.Abs(player.velocity.x) > runThreshold);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Floor") && grounded == true)
+        {
+            grounded = false;
+            Animation.SetBool("Jumping", true);
+        }
+
+        else if (collision.gameObject.tag == ("Enemy"))
+        {
+            Animation.SetBool("TakingDamage", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Floor") && grounded == false)
+        if (collision.gameObject.tag == ("Floor"))
         {
             grounded = true;
+            Animation.SetBool("Jumping", false);
+        }
+
+        else if (collision.gameObject.tag == ("Enemy"))
+        {
+            Animation.SetBool("TakingDamage", true);
+
+            if (health == 100)
+            {
+                health -= 50;
+                player.transform.localScale -= new Vector3(0.25f, 0.25f, 0.25f);
+            }
+            else
+            {
+                lives -= 1;
+
+                if (lives > 0)
+                {
+                    if (player.transform.position.x < 68)
+                    {
+                        player.transform.position = startSpawnLocation.transform.position;
+                    }
+                    else
+                    {
+                        player.transform.position = midpointSpawnLocation.transform.position;
+                    }
+                }
+                else
+                {
+                    //HANDLE GAME OVER
+                }
+            }
         }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        HealthPowerup healthPowerup = collider.gameObject.GetComponent<HealthPowerup>();
-
-        if (healthPowerup != null)
+        if (collider.gameObject.tag == ("HealthPowerup") && health == 50)
         {
-            if (health == 50)
+            health += 50;
+            Destroy(collider.gameObject);
+            player.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        }
+
+        else if (collider.gameObject.tag == ("LifePowerup"))
+        {
+            lives += 1;
+            Destroy(collider.gameObject);
+        }
+
+        else if (collider.gameObject.tag == ("Coin"))
+        {
+            coins += 1;
+            Destroy(collider.gameObject);
+        }
+
+        else if (collider.gameObject.tag == ("HoleCollider1"))
+        {
+            if (lives > 0)
             {
-                health += healthPowerup.healthIncrease;
+                lives -= 1;
+                player.transform.position = startSpawnLocation.transform.position;
             }
-            Destroy(healthPowerup.gameObject);
+            else
+            {
+                // HANDLE GAME OVER
+            }
+        }
+
+        else if (collider.gameObject.tag == ("HoleCollider2"))
+        {
+            if (lives > 0)
+            {
+                lives -= 1;
+                player.transform.position = midpointSpawnLocation.transform.position;
+            }
+        }
+
+        else if (collider.gameObject.tag == ("QueenSpawnLocation"))
+        {
+            EnemyController newRedAnt = Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation); 
         }
     }
 
