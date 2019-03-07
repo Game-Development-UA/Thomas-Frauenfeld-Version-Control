@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
     public EnemyController redAnt;
     public GameObject queenSpawner;
     public List<SlimeballProjectile> slimeballs = new List<SlimeballProjectile>();
+    public AudioClip shootSoundEffect;
+    public AudioClip jumpSoundEffect;
 
     float horizontal;
     bool grounded;
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             player.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+            AudioSource.PlayClipAtPoint(jumpSoundEffect, transform.position);
         }
 
         if (horizontal < 0)
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour {
             if (slimeballs.Count < maxProjectiles)
             {
                 SlimeballProjectile newSlimeball = Instantiate<SlimeballProjectile>(slimeballPrefab, slimeballSpawnLocation.position, player.transform.rotation);
+                AudioSource.PlayClipAtPoint(shootSoundEffect, transform.position);
                 newSlimeball.transform.position = slimeballSpawnLocation.position;
                 newSlimeball.player = this;
 
@@ -172,7 +176,9 @@ public class PlayerController : MonoBehaviour {
 
         else if (collider.gameObject.tag == ("QueenSpawnLocation"))
         {
-            EnemyController newRedAnt = Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation); 
+            Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
+            Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
+            Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
         }
     }
 

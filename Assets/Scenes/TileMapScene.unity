@@ -139,7 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85006580 stripped
 GameObject:
@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 242454559}
   - component: {fileID: 242454558}
   - component: {fileID: 242454557}
+  - component: {fileID: 242454561}
   m_Layer: 0
   m_Name: Coin (20)
   m_TagString: Coin
@@ -269,8 +270,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &242454561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 242454556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &252041940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -335,93 +348,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b5c698baef3248b3614fa14f537b7, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1001 &343037637
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 42.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 212914401072902592, guid: b088c094047710d469c637c7ce0ad0ca,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_Name
-      value: Black Ant (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 50516856409871084, guid: b088c094047710d469c637c7ce0ad0ca,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 212914401072902592, guid: b088c094047710d469c637c7ce0ad0ca,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1281308d725a54a4cabdb803c6c04628,
-        type: 3}
-    - target: {fileID: 1904213195512784, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114300475414013846, guid: b088c094047710d469c637c7ce0ad0ca,
-        type: 2}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &349238166
 Prefab:
@@ -553,6 +479,30 @@ Prefab:
       propertyPath: queenSpawner
       value: 
       objectReference: {fileID: 1159753354}
+    - target: {fileID: 61374994395192346, guid: 3d57af58a663d0949a20e727a2665875,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 23b27c3cbb1123348b70d1e0dc53a9e8, type: 2}
+    - target: {fileID: 1764615732920020, guid: 3d57af58a663d0949a20e727a2665875, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114409726966006574, guid: 3d57af58a663d0949a20e727a2665875,
+        type: 2}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e94b610ac994463bb21f494d1966f09, type: 3}
+    - target: {fileID: 114409726966006574, guid: 3d57af58a663d0949a20e727a2665875,
+        type: 2}
+      propertyPath: jumpSoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: be2522789ff384a4996b649774bedeb6, type: 3}
+    - target: {fileID: 114409726966006574, guid: 3d57af58a663d0949a20e727a2665875,
+        type: 2}
+      propertyPath: shootSoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e94b610ac994463bb21f494d1966f09, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d57af58a663d0949a20e727a2665875, type: 2}
   m_IsPrefabAsset: 0
@@ -590,6 +540,7 @@ GameObject:
   - component: {fileID: 362250049}
   - component: {fileID: 362250048}
   - component: {fileID: 362250047}
+  - component: {fileID: 362250051}
   m_Layer: 0
   m_Name: Coin (3)
   m_TagString: Coin
@@ -691,8 +642,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362250051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362250046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &403888783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -727,6 +690,7 @@ GameObject:
   - component: {fileID: 410191070}
   - component: {fileID: 410191069}
   - component: {fileID: 410191068}
+  - component: {fileID: 410191072}
   m_Layer: 0
   m_Name: Coin (8)
   m_TagString: Coin
@@ -828,8 +792,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &410191072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410191067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &418441121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1012,7 @@ GameObject:
   - component: {fileID: 430370230}
   - component: {fileID: 430370229}
   - component: {fileID: 430370228}
+  - component: {fileID: 430370232}
   m_Layer: 0
   m_Name: Coin (10)
   m_TagString: Coin
@@ -1137,8 +1114,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430370232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430370227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &440040991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -1214,7 +1203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &523024270
 Prefab:
@@ -1396,7 +1385,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563157861
 GameObject:
@@ -1409,6 +1398,7 @@ GameObject:
   - component: {fileID: 563157864}
   - component: {fileID: 563157863}
   - component: {fileID: 563157862}
+  - component: {fileID: 563157866}
   m_Layer: 0
   m_Name: Coin (17)
   m_TagString: Coin
@@ -1510,8 +1500,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563157866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563157861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &668408481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1525,7 @@ GameObject:
   - component: {fileID: 668408484}
   - component: {fileID: 668408483}
   - component: {fileID: 668408482}
+  - component: {fileID: 668408486}
   m_Layer: 0
   m_Name: Coin (18)
   m_TagString: Coin
@@ -1624,8 +1627,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668408486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668408481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &765101714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -1686,7 +1701,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
       propertyPath: m_Name
@@ -1732,6 +1747,7 @@ GameObject:
   - component: {fileID: 871402558}
   - component: {fileID: 871402557}
   - component: {fileID: 871402556}
+  - component: {fileID: 871402560}
   m_Layer: 0
   m_Name: Coin (16)
   m_TagString: Coin
@@ -1833,8 +1849,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871402560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871402555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1001 &901554187
 Prefab:
   m_ObjectHideFlags: 0
@@ -1888,6 +1916,7 @@ GameObject:
   - component: {fileID: 930482601}
   - component: {fileID: 930482600}
   - component: {fileID: 930482599}
+  - component: {fileID: 930482603}
   m_Layer: 0
   m_Name: HealthPowerup (1)
   m_TagString: HealthPowerup
@@ -1989,31 +2018,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &943860328 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
-    type: 2}
-  m_PrefabInternal: {fileID: 343037637}
---- !u!95 &943860329
-Animator:
-  serializedVersion: 3
+--- !u!114 &930482603
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 943860328}
+  m_GameObject: {fileID: 930482598}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 181eec25a5262ff4ebd466c8bf79e0cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14efae8fca6443c40b19fd86c784445b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 544b7d9e8b4ea4950a292189118a3c0b, type: 3}
 --- !u!1 &955654442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2058,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &964175457
 Prefab:
@@ -2079,7 +2097,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 212914401072902592, guid: b088c094047710d469c637c7ce0ad0ca,
         type: 2}
@@ -2265,13 +2283,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 992007522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.19, y: 0.04, z: -1}
+  m_LocalPosition: {x: 96.19, y: 0.22, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1027168154}
   - {fileID: 1159753355}
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &992007528
 MonoBehaviour:
@@ -2297,7 +2315,7 @@ GameObject:
   - component: {fileID: 1027168154}
   - component: {fileID: 1027168156}
   - component: {fileID: 1027168155}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: QueenEnemySpawner
   m_TagString: QueenSpawnLocation
   m_Icon: {fileID: 0}
@@ -2311,8 +2329,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027168153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.57, y: -0.24, z: 0}
-  m_LocalScale: {x: -5.0375, y: 0.5, z: 1}
+  m_LocalPosition: {x: -1.57, y: 0.19, z: 0}
+  m_LocalScale: {x: -5.0375, y: 1.45, z: 1}
   m_Children: []
   m_Father: {fileID: 992007527}
   m_RootOrder: 0
@@ -2364,6 +2382,7 @@ GameObject:
   - component: {fileID: 1027782116}
   - component: {fileID: 1027782115}
   - component: {fileID: 1027782114}
+  - component: {fileID: 1027782118}
   m_Layer: 0
   m_Name: LifePowerup (1)
   m_TagString: LifePowerup
@@ -2465,8 +2484,20 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027782118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027782113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d968515432f0fe41984f1e50ecc271c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 257ad41856c414a4fa83c51d7778725c, type: 3}
 --- !u!1 &1116217073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2550,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116981290
 GameObject:
@@ -2532,6 +2563,7 @@ GameObject:
   - component: {fileID: 1116981293}
   - component: {fileID: 1116981292}
   - component: {fileID: 1116981291}
+  - component: {fileID: 1116981295}
   m_Layer: 0
   m_Name: Coin (19)
   m_TagString: Coin
@@ -2633,8 +2665,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116981295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116981290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1159753354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,6 +2718,7 @@ GameObject:
   - component: {fileID: 1160616919}
   - component: {fileID: 1160616918}
   - component: {fileID: 1160616917}
+  - component: {fileID: 1160616921}
   m_Layer: 0
   m_Name: Coin (9)
   m_TagString: Coin
@@ -2775,8 +2820,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160616921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160616916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1001 &1201455663
 Prefab:
   m_ObjectHideFlags: 0
@@ -2901,7 +2958,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1355303851
 Prefab:
@@ -2940,7 +2997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4674366251286964, guid: b088c094047710d469c637c7ce0ad0ca, type: 2}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 212914401072902592, guid: b088c094047710d469c637c7ce0ad0ca,
         type: 2}
@@ -3001,6 +3058,7 @@ GameObject:
   - component: {fileID: 1388100091}
   - component: {fileID: 1388100090}
   - component: {fileID: 1388100093}
+  - component: {fileID: 1388100094}
   m_Layer: 0
   m_Name: HealthPowerup
   m_TagString: HealthPowerup
@@ -3090,7 +3148,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1388100093
 MonoBehaviour:
@@ -3104,6 +3162,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+--- !u!114 &1388100094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388100089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14efae8fca6443c40b19fd86c784445b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 544b7d9e8b4ea4950a292189118a3c0b, type: 3}
 --- !u!1 &1394762628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,6 +3279,7 @@ GameObject:
   - component: {fileID: 1479689971}
   - component: {fileID: 1479689970}
   - component: {fileID: 1479689969}
+  - component: {fileID: 1479689973}
   m_Layer: 0
   m_Name: Coin (7)
   m_TagString: Coin
@@ -3310,8 +3381,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479689973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479689968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1490758381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -3346,6 +3429,7 @@ GameObject:
   - component: {fileID: 1493220068}
   - component: {fileID: 1493220067}
   - component: {fileID: 1493220066}
+  - component: {fileID: 1493220070}
   m_Layer: 0
   m_Name: Coin (13)
   m_TagString: Coin
@@ -3447,8 +3531,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1493220070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493220065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1497738564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,7 +3597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526476338
 GameObject:
@@ -3669,6 +3765,7 @@ GameObject:
   - component: {fileID: 1544573154}
   - component: {fileID: 1544573153}
   - component: {fileID: 1544573152}
+  - component: {fileID: 1544573156}
   m_Layer: 0
   m_Name: Coin (2)
   m_TagString: Coin
@@ -3770,8 +3867,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1544573156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1544573151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1594696981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,6 +3892,7 @@ GameObject:
   - component: {fileID: 1594696984}
   - component: {fileID: 1594696983}
   - component: {fileID: 1594696982}
+  - component: {fileID: 1594696986}
   m_Layer: 0
   m_Name: Coin (5)
   m_TagString: Coin
@@ -3884,8 +3994,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594696986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594696981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1606779038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,7 +4060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608038387
 GameObject:
@@ -3951,6 +4073,7 @@ GameObject:
   - component: {fileID: 1608038390}
   - component: {fileID: 1608038389}
   - component: {fileID: 1608038388}
+  - component: {fileID: 1608038392}
   m_Layer: 0
   m_Name: Coin (4)
   m_TagString: Coin
@@ -4052,8 +4175,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608038392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608038387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1653703438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,7 +4241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697723941 stripped
 GameObject:
@@ -4142,6 +4277,7 @@ GameObject:
   - component: {fileID: 1729973848}
   - component: {fileID: 1729973847}
   - component: {fileID: 1729973846}
+  - component: {fileID: 1729973850}
   m_Layer: 0
   m_Name: HealthPowerup (2)
   m_TagString: HealthPowerup
@@ -4243,8 +4379,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729973850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729973845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14efae8fca6443c40b19fd86c784445b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 544b7d9e8b4ea4950a292189118a3c0b, type: 3}
 --- !u!1 &1743089142
 GameObject:
   m_ObjectHideFlags: 0
@@ -18148,7 +18296,7 @@ PlatformEffector2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RotationalOffset: 0
-  m_UseOneWay: 1
+  m_UseOneWay: 0
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
@@ -18206,7 +18354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745571162
 GameObject:
@@ -18285,6 +18433,7 @@ GameObject:
   - component: {fileID: 1787028424}
   - component: {fileID: 1787028423}
   - component: {fileID: 1787028422}
+  - component: {fileID: 1787028426}
   m_Layer: 0
   m_Name: Coin (1)
   m_TagString: Coin
@@ -18386,8 +18535,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787028426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787028421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1848013998
 GameObject:
   m_ObjectHideFlags: 0
@@ -18399,6 +18560,7 @@ GameObject:
   - component: {fileID: 1848014001}
   - component: {fileID: 1848014000}
   - component: {fileID: 1848013999}
+  - component: {fileID: 1848014003}
   m_Layer: 0
   m_Name: Coin (12)
   m_TagString: Coin
@@ -18500,8 +18662,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1848014003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848013998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1859744407
 GameObject:
   m_ObjectHideFlags: 0
@@ -18513,6 +18687,7 @@ GameObject:
   - component: {fileID: 1859744410}
   - component: {fileID: 1859744408}
   - component: {fileID: 1859744409}
+  - component: {fileID: 1859744412}
   m_Layer: 0
   m_Name: LifePowerup
   m_TagString: LifePowerup
@@ -18614,8 +18789,20 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1859744412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859744407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d968515432f0fe41984f1e50ecc271c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 257ad41856c414a4fa83c51d7778725c, type: 3}
 --- !u!1 &1878966519
 GameObject:
   m_ObjectHideFlags: 0
@@ -18627,6 +18814,7 @@ GameObject:
   - component: {fileID: 1878966522}
   - component: {fileID: 1878966521}
   - component: {fileID: 1878966520}
+  - component: {fileID: 1878966524}
   m_Layer: 0
   m_Name: Coin (15)
   m_TagString: Coin
@@ -18728,8 +18916,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878966524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878966519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1885588923
 GameObject:
   m_ObjectHideFlags: 0
@@ -18741,6 +18941,7 @@ GameObject:
   - component: {fileID: 1885588926}
   - component: {fileID: 1885588925}
   - component: {fileID: 1885588924}
+  - component: {fileID: 1885588928}
   m_Layer: 0
   m_Name: Coin (14)
   m_TagString: Coin
@@ -18842,8 +19043,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885588928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885588923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1891755994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1198789370496804, guid: b088c094047710d469c637c7ce0ad0ca,
@@ -18950,6 +19163,7 @@ GameObject:
   - component: {fileID: 1985471283}
   - component: {fileID: 1985471282}
   - component: {fileID: 1985471281}
+  - component: {fileID: 1985471285}
   m_Layer: 0
   m_Name: Coin (6)
   m_TagString: Coin
@@ -19051,8 +19265,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985471285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1985471280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &1990142518
 GameObject:
   m_ObjectHideFlags: 0
@@ -19105,7 +19331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2009524453
 GameObject:
@@ -19118,6 +19344,7 @@ GameObject:
   - component: {fileID: 2009524456}
   - component: {fileID: 2009524455}
   - component: {fileID: 2009524454}
+  - component: {fileID: 2009524458}
   m_Layer: 0
   m_Name: Coin (11)
   m_TagString: Coin
@@ -19219,8 +19446,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009524458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009524453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &2071501467
 GameObject:
   m_ObjectHideFlags: 0
@@ -19232,6 +19471,7 @@ GameObject:
   - component: {fileID: 2071501470}
   - component: {fileID: 2071501469}
   - component: {fileID: 2071501468}
+  - component: {fileID: 2071501472}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -19333,8 +19573,20 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071501472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071501467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
 --- !u!1 &2117017083
 GameObject:
   m_ObjectHideFlags: 0
@@ -19346,6 +19598,7 @@ GameObject:
   - component: {fileID: 2117017086}
   - component: {fileID: 2117017085}
   - component: {fileID: 2117017084}
+  - component: {fileID: 2117017088}
   m_Layer: 0
   m_Name: Coin (21)
   m_TagString: Coin
@@ -19447,5 +19700,17 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117017088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117017083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ed9e1651eace49af70c3bcd592d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
