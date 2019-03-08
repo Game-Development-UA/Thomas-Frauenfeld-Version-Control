@@ -15,6 +15,7 @@ TagManager:
   - HoleCollider2
   - Queen
   - QueenSpawnLocation
+  - EndLevel
   layers:
   - Default
   - TransparentFX

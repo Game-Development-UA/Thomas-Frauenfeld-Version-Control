@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TileMapScene.unity
     guid: 91c72025c89475c4b94b7d27d57ad106
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 1b716d049862a5e48acea4498e2626db
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 2a6d0ab2ab65c66419527c8e13f3fdb9
   m_configObjects: {}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -26,8 +27,8 @@ public class PlayerController : MonoBehaviour {
     float horizontal;
     bool grounded;
     int health;
-    int lives;
-    int coins;
+    public int lives;
+    public int coins;
 
     void Start() {
         health = 50;
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour {
             {
                 lives -= 1;
 
-                if (lives > 0)
+                if (lives >= 0)
                 {
                     if (player.transform.position.x < 68)
                     {
@@ -125,7 +126,7 @@ public class PlayerController : MonoBehaviour {
                 }
                 else
                 {
-                    //HANDLE GAME OVER
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
                 }
             }
         }
@@ -161,7 +162,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                // HANDLE GAME OVER
+                SceneManager.LoadScene(3);
             }
         }
 
@@ -179,6 +180,11 @@ public class PlayerController : MonoBehaviour {
             Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
             Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
             Instantiate<EnemyController>(redAnt, queenSpawner.transform.position, queen.transform.rotation);
+        }
+
+        else if (collider.gameObject.tag == ("EndLevel"))
+        {
+            SceneManager.LoadScene(2);
         }
     }
 
